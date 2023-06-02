@@ -1,0 +1,15 @@
+SHELL := /bin/bash
+FOLDER := /tmp
+
+help:
+	@echo "make -f mf-backup FOLDER=<path>"
+
+backup:
+	@echo "Backup $(FOLDER) as $(FOLDER).bak..."; sleep 2s
+	@[[ -d $(FOLDER).bak ]] && echo "Backup already exists" || cp -rp $(FOLDER) $(FOLDER).bak
+
+restore: $(FOLDER).bak
+	@echo "Restore of folder $(FOLDER) from $(FOLDER).bak..." ; sleep 2s
+	@[[ -d $(FOLDER) ]] && echo "Folder already exists" || cp -rp $(FOLDER).bak $(FOLDER)
+
+.PHONY: help backup restore
