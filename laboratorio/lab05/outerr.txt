@@ -1,0 +1,11 @@
+05.pdf
+1.c
+1.out
+2.c
+2.out
+bin1
+bin2
+bin3
+outerr.txt
+Hello World
+/home/gab/repos/unitn-so/laboratorio/lab05
