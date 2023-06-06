@@ -1,7 +1,6 @@
 #!/bin/bash
 
 if [ $# -ne 2 ]; then
-  echo "Errore: devono essere passati esattamente due argomenti."
   exit 3
 fi
 
